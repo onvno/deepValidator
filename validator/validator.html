@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="./css/deepValidator.css">
+</head>
+
+<body>
+
+<form action="" id="vform">
+	<div>
+		<label for=""><em>*</em>用户名：</label>
+		<input data-need="require" type="text" class="de_username" placeholder="输入不低于3个字符">
+		<p class="alarmtxt">请输入不低于3个字符</p>
+	</div>
+	<div>
+		<label for=""><em>*</em>用户名2：</label>
+		<input data-need="require" type="text" class="de_username" placeholder="输入不低于3个字符">
+		<p class="alarmtxt">请输入不低于3个字符</p>
+	</div>
+	<div>
+		<label for="">用户名3：</label>
+		<input type="text" class="de_username" placeholder="输入不低于3个字符">
+		<p class="alarmtxt">请输入不低于3个字符</p>
+	</div>
+
+	<div>
+		<label for=""><em>*</em>密码：</label>
+		<input data-need="require" type="password" class="de_pass">
+		<p class="alarmtxt">请输入不低于6位字符的密码</p>
+	</div>
+	<div>
+		<label for=""><em>*</em>确认密码：</label>
+		<input data-need="require" type="password" class="de_confirmpass">
+		<p class="alarmtxt">请确认两次输入相同的密码</p>
+	</div>
+
+	<div>
+		<label for=""><em>*</em>邮箱1：</label>
+		<input data-need="require" type="text" class="de_email" placeholder="">
+		<p class="alarmtxt">输入正确的邮箱格式</p>
+	</div>
+	<div>
+		<label for="">邮箱2：</label>
+		<input type="text" class="de_email" placeholder="">
+		<p class="alarmtxt">输入正确的邮箱格式</p>
+	</div>
+	<div>
+		<label for=""><em>*</em>手机：</label>
+		<input data-need="require" type="text" class="de_mobile" placeholder="18888888888">
+		<p class="alarmtxt">请输入11位正确的手机号数字</p>
+	</div>
+	<div>
+		<label for="">手机2：</label>
+		<input type="text" class="de_mobile" placeholder="18888888888">
+		<p class="alarmtxt">请输入11位正确的手机号数字</p>
+	</div>
+	<div>
+		<label for=""><em>*</em>评论：</label>
+		<textarea data-need="require" class="de_discuss" placeholder="不能为空"></textarea>
+	</div>
+	<div>
+		<label for="">评论2：</label>
+		<textarea class="de_discuss" placeholder="不能为空"></textarea>
+	</div>
+
+
+	
+
+	<button type="submit">提交</button>
+</form>
+
+
+<!--[if lte IE 8]>
+    <script src="../deep-ie8.js"></script>
+<![endif]-->
+<script src="../deepEase.js"></script>
+<script src="./js/deepValidator.js"></script>
+<script>
+	window.onload = function() {
+		var vform = document.getElementById('vform');
+		var vsubmit = vform.getElementsByTagName('button')[0];
+
+		deepValidator({
+			vform : vform,
+			vsubmit : vsubmit
+		});
+	};
+</script>
+
+    
+</body>
+</html>
